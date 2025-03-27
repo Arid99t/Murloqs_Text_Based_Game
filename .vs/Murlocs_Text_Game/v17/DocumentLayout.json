@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Level.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Level.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Header\\Level.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Enemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Header\\Enemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Header\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Header\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Ability.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Header\\Ability.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\GameUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Header\\GameUtils.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Header\\Character.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Header\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Murlocs_Text_Game\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Level.cpp",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Level.cpp",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Level.cpp",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Level.cpp",
+              "RelativeToolTip": "Murlocs_Text_Game\\Level.cpp",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAmwLUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-27T03:55:58.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Level.h",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Level.h",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Header\\Level.h",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Level.h",
+              "RelativeToolTip": "Murlocs_Text_Game\\Header\\Level.h",
+              "ViewState": "AgIAABYAAAAAAAAAAAAmwDcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T03:55:40.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enemy.cpp",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Enemy.cpp",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Enemy.cpp",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Enemy.cpp",
+              "RelativeToolTip": "Murlocs_Text_Game\\Enemy.cpp",
+              "ViewState": "AgIAALEAAAAAAAAAAAAmwNIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-27T03:55:16.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Ability.h",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Ability.h",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Header\\Ability.h",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Ability.h",
+              "RelativeToolTip": "Murlocs_Text_Game\\Header\\Ability.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T03:52:41.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameUtils.h",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\GameUtils.h",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Header\\GameUtils.h",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\GameUtils.h",
+              "RelativeToolTip": "Murlocs_Text_Game\\Header\\GameUtils.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T03:51:58.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Player.cpp",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Player.cpp",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Player.cpp",
+              "RelativeToolTip": "Murlocs_Text_Game\\Player.cpp",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-27T03:35:36.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Enemy.h",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Enemy.h",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Header\\Enemy.h",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Enemy.h",
+              "RelativeToolTip": "Murlocs_Text_Game\\Header\\Enemy.h",
+              "ViewState": "AgIAABoAAAAAAAAAAAAmwDsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T02:54:42.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Item.h",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Item.h",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Header\\Item.h",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Item.h",
+              "RelativeToolTip": "Murlocs_Text_Game\\Header\\Item.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T02:53:43.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.h",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Player.h",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Header\\Player.h",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Player.h",
+              "RelativeToolTip": "Murlocs_Text_Game\\Header\\Player.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T02:54:14.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Game.h",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Game.h",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Header\\Game.h",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Game.h",
+              "RelativeToolTip": "Murlocs_Text_Game\\Header\\Game.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T02:54:44.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Character.h",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Character.h",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Header\\Character.h",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Header\\Character.h",
+              "RelativeToolTip": "Murlocs_Text_Game\\Header\\Character.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-27T02:54:39.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Item.cpp",
+              "DocumentMoniker": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Item.cpp",
+              "RelativeDocumentMoniker": "Murlocs_Text_Game\\Item.cpp",
+              "ToolTip": "D:\\Users\\MY PC\\source\\repos\\Murlocs_Text_Game\\Murlocs_Text_Game\\Item.cpp",
+              "RelativeToolTip": "Murlocs_Text_Game\\Item.cpp",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAmwGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-27T02:53:36.362Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

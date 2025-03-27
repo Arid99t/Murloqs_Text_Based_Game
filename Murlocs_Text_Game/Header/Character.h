@@ -50,7 +50,7 @@ public:
 	//calculate the actual damage
 	virtual int calculateDamage(int rawDamage) const;
 
-	// Pure virtual methods (must be implemented by derived classes)
+	// Pure virtual methods --will have to be override
 	virtual void attack(Character& target) = 0;
 	virtual void takeDamage(int damage) = 0;
 	virtual void heal(int amount) = 0;
