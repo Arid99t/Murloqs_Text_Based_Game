@@ -2,37 +2,38 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
-#include "player.h"
-#include "enemy.h"
+#include "Header/Player.h"
+#include "Header/Enemy.h"
 #include <vector>
 #include <memory>
+using namespace std;
 
 class Level {
 private:
     int levelNumber;
-    std::string levelName;
-    std::string description;
-    std::vector<std::unique_ptr<Enemy>> enemies;
-    std::unique_ptr<Item> reward;
-    std::unique_ptr<Ability> newAbility;
+    string levelName;
+    string description;
+    vector<unique_ptr<Enemy>> enemies;
+    unique_ptr<Item> reward;
+    unique_ptr<Ability> newAbility;
 
 public:
     // Constructor
-    Level(int number, const std::string& name, const std::string& desc);
+    Level(int number, const string& name, const string& desc);
 
     // Virtual destructor
     virtual ~Level() = default;
 
     // Getters
     int getLevelNumber() const;
-    std::string getLevelName() const;
-    std::string getDescription() const;
+    string getLevelName() const;
+    string getDescription() const;
     int getEnemyCount() const;
 
     // Methods to add enemies, rewards, and abilities
-    void addEnemy(std::unique_ptr<Enemy> enemy);
-    void setReward(std::unique_ptr<Item> item);
-    void setNewAbility(std::unique_ptr<Ability> ability);
+    void addEnemy(unique_ptr<Enemy> enemy);
+    void setReward(unique_ptr<Item> item);
+    void setNewAbility(unique_ptr<Ability> ability);
 
     // Methods to display level info
     void displayLevelInfo() const;

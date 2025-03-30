@@ -1,4 +1,4 @@
-#include "ability.h"
+#include "Header/Ability.h"
 #include <iostream>
 using namespace std;
 
@@ -14,7 +14,7 @@ string Ability::getName() const {
 string Ability::getDescription() const {
 	return description;
 }
-string Ability::getActivationChance() const {
+int Ability::getActivationChance() const {
 	return activationChance;
 }
 //Check if ability activates based on probability
@@ -41,7 +41,7 @@ Blocker::Blocker() : Ability("Blocker", "Blocks all damage from enemy's next att
 
 void Blocker::use(Character& user, Character& target) {
 	// This is a passive ability that will be checked in the Player's takeDamage method
-	cout << "\n PERFECT BLOCK! " << user.getName() << " completely blocks "
+	cout << "\n PERFECT BLOCK! " << user.getName() << " completely blocks ";
 }
 
 //lifesteal ability implementation

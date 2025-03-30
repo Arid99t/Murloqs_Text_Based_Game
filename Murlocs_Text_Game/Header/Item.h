@@ -4,23 +4,23 @@
 
 #include <string>
 #include <iostream>
-
+using namespace std;
 // Abstract base class for all items
 class Item {
 protected:
-    std::string name;
-    std::string description;
+    string name;
+    string description;
 
 public:
     // Constructor
-    Item(const std::string& name, const std::string& desc);
+    Item(const string& name, const string& desc);
 
     // Virtual destructor
     virtual ~Item() = default;
 
     // Getters
-    std::string getName() const;
-    std::string getDescription() const;
+    string getName() const;
+    string getDescription() const;
 
     // Pure virtual method to use the item (will be implemented by derived classes)
     virtual void use() const = 0;

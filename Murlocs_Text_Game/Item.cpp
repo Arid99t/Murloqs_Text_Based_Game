@@ -1,22 +1,23 @@
 // item.cpp
-#include "item.h"
+#include "Header/Item.h"
+using namespace std;
 
 // Base Item class implementation
-Item::Item(const std::string& name, const std::string& desc)
+Item::Item(const string& name, const string& desc)
     : name(name), description(desc) {
 }
 
-std::string Item::getName() const {
+string Item::getName() const {
     return name;
 }
 
-std::string Item::getDescription() const {
+string Item::getDescription() const {
     return description;
 }
 
 void Item::displayInfo() const {
-    std::cout << "Item: " << name << std::endl;
-    std::cout << "Description: " << description << std::endl;
+    cout << "Item: " << name << endl;
+    cout << "Description: " << description << endl;
 }
 
 // Sword item implementation
@@ -30,8 +31,8 @@ int Sword::getDamageBoost() const {
 }
 
 void Sword::use() const {
-    std::cout << "You raise the " << name << " high, feeling its power coursing through you!" << std::endl;
-    std::cout << "Melee damage increased by " << damageBoost << "!" << std::endl;
+    cout << "You raise the " << name << " high, feeling its power coursing through you!" << endl;
+    cout << "Melee damage increased by " << damageBoost << "!" << endl;
 }
 
 // Shield item implementation
@@ -45,8 +46,8 @@ int Shield::getDefenceBoost() const {
 }
 
 void Shield::use() const {
-    std::cout << "You strap the " << name << " to your arm, feeling more protected!" << std::endl;
-    std::cout << "Defence increased by " << defenceBoost << "!" << std::endl;
+    cout << "You strap the " << name << " to your arm, feeling more protected!" << endl;
+    cout << "Defence increased by " << defenceBoost << "!" << endl;
 }
 
 // Armor item implementation
@@ -64,9 +65,9 @@ int Armor::getDefenceBoost() const {
 }
 
 void Armor::use() const {
-    std::cout << "You don the " << name << ", feeling its protective embrace!" << std::endl;
-    std::cout << "Maximum health increased by " << healthBoost << "!" << std::endl;
-    std::cout << "Defence increased by " << defenceBoost << "!" << std::endl;
+    cout << "You don the " << name << ", feeling its protective embrace!" << endl;
+    cout << "Maximum health increased by " << healthBoost << "!" << endl;
+    cout << "Defence increased by " << defenceBoost << "!" << endl;
 }
 
 // Bow item implementation
@@ -80,8 +81,8 @@ int Bow::getRangedDamageBoost() const {
 }
 
 void Bow::use() const {
-    std::cout << "You string the " << name << ", feeling its precision and power!" << std::endl;
-    std::cout << "Ranged damage increased by " << rangedDamageBoost << "!" << std::endl;
+    cout << "You string the " << name << ", feeling its precision and power!" << endl;
+    cout << "Ranged damage increased by " << rangedDamageBoost << "!" << endl;
 }
 
 // Map item implementation
@@ -90,11 +91,11 @@ Map::Map()
 }
 
 void Map::use() const {
-    std::cout << "You unfold the " << name << " and study it carefully..." << std::endl;
-    std::cout << "The map reveals a long journey ahead. You must collect four magical items:" << std::endl;
-    std::cout << "- The Legendary Sword (Level 2)" << std::endl;
-    std::cout << "- The Defender Shield (Level 3)" << std::endl;
-    std::cout << "- The Guardian Armor (Level 4)" << std::endl;
-    std::cout << "- The Hunter's Bow (Level 5)" << std::endl;
-    std::cout << "Only with these items can you hope to defeat Murlocs and save your village!" << std::endl;
+    cout << "You unfold the " << name << " and study it carefully..." << endl;
+    cout << "The map reveals a long journey ahead. You must collect four magical items:" << endl;
+    cout << "- The Legendary Sword (Level 2)" << endl;
+    cout << "- The Defender Shield (Level 3)" << endl;
+    cout << "- The Guardian Armor (Level 4)" << endl;
+    cout << "- The Hunter's Bow (Level 5)" << endl;
+    cout << "Only with these items can you hope to defeat Murlocs and save your village!" << endl;
 }

@@ -1,14 +1,14 @@
-#include "Character.h"
+#include "Header/Character.h"
 using namespace std;
 
 
 // Initialize static members
-random_device Charactter::rd;
+random_device Character::rd;
 mt19937 Character::gen(Character::rd());
 uniform_int_distribution<int> Character::dis(1, 100);
 
 //constructor
-Character::Character(const string& name, int health, int melee, int ranged, int def) 
+Character::Character(const string& name, int health, int melee, int ranged, int def)
 	: name(name), maxHealth(health), currentHealth(health), meleeDamage(melee), rangedDamage(ranged), defence(def), isAlive(true) {
 
 }

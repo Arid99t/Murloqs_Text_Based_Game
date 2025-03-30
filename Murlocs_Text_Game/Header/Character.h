@@ -1,6 +1,12 @@
-#pragma once
+// character.h
+#ifndef CHARACTER_H
+#define CHARACTER_H
+
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <random>
 using namespace std;
 
 class Character {
@@ -21,9 +27,7 @@ protected:
 
 public:
 	//const
-	Character(const string& name, int health, int melee, int ranged, int def) {
-
-	}
+	Character(const string& name, int health, int melee, int ranged, int def);
 
 	//destructor
 	~Character() {
@@ -62,3 +66,5 @@ public:
 	//static method to generate random number
 	static int getRandomNumber(int min, int max);
 };
+
+#endif

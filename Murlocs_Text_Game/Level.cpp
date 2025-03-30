@@ -1,12 +1,13 @@
 // level.cpp
-#include "level.h"
+#include "Header/Level.h"
 #include <iostream>
 #include <limits>
 #include <thread>
 #include <chrono>
+using namespace std;
 
 // Constructor implementation
-Level::Level(int number, const std::string& name, const std::string& desc)
+Level::Level(int number, const string& name, const string& desc)
     : levelNumber(number), levelName(name), description(desc) {
 }
 
@@ -15,11 +16,11 @@ int Level::getLevelNumber() const {
     return levelNumber;
 }
 
-std::string Level::getLevelName() const {
+string Level::getLevelName() const {
     return levelName;
 }
 
-std::string Level::getDescription() const {
+string Level::getDescription() const {
     return description;
 }
 
@@ -28,24 +29,24 @@ int Level::getEnemyCount() const {
 }
 
 // Methods to add enemies, rewards, and abilities
-void Level::addEnemy(std::unique_ptr<Enemy> enemy) {
-    enemies.push_back(std::move(enemy));
+void Level::addEnemy(unique_ptr<Enemy> enemy) {
+    enemies.push_back(move(enemy));
 }
 
-void Level::setReward(std::unique_ptr<Item> item) {
-    reward = std::move(item);
+void Level::setReward(unique_ptr<Item> item) {
+    reward = move(item);
 }
 
-void Level::setNewAbility(std::unique_ptr<Ability> ability) {
-    newAbility = std::move(ability);
+void Level::setNewAbility(unique_ptr<Ability> ability) {
+    newAbility = move(ability);
 }
 
 // Methods to display level info
 void Level::displayLevelInfo() const {
-    std::cout << "\n========== LEVEL " << levelNumber << ": " << levelName << " ==========" << std::endl;
-    std::cout << description << std::endl;
-    std::cout << "Number of enemies: " << enemies.size() << std::endl;
-    std::cout << "=================================================" << std::endl;
+    cout << "\n========== LEVEL " << levelNumber << ": " << levelName << " ==========" << endl;
+    cout << description << endl;
+    cout << "Number of enemies: " << enemies.size() << endl;
+    cout << "=================================================" << endl;
 }
 
 // Method to run the level
@@ -53,8 +54,8 @@ bool Level::runLevel(Player& player) {
     // Display level info
     displayLevelInfo();
 
-    std::cout << "\nPress Enter to continue...";
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    cout << "\nPress Enter to continue...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     // Combat with each enemy
     for (auto& enemy : enemies) {
@@ -64,12 +65,12 @@ bool Level::runLevel(Player& player) {
         }
 
         // Short rest between enemies
-        std::cout << "\nYou take a short rest before facing the next enemy..." << std::endl;
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        cout << "\nYou take a short rest before facing the next enemy..." << endl;
+        this_thread::sleep_for(chrono::seconds(1));
     }
 
     // Level completed
-    std::cout << "\n?? LEVEL " << levelNumber << " COMPLETED! ??" << std::endl;
+    cout << "\n?? LEVEL " << levelNumber << " COMPLETED! ??" << endl;
 
     // Award rewards
     awardRewards(player);
@@ -82,14 +83,14 @@ bool Level::runLevel(Player& player) {
 
 // Method for combat between player and enemy
 bool Level::combat(Player& player, Enemy& enemy) {
-    std::cout << "\n?? COMBAT START: " << player.getName() << " vs " << enemy.getName() << " ??" << std::endl;
+    cout << "\n?? COMBAT START: " << player.getName() << " vs " << enemy.getName() << " ??" << endl;
 
     // Display stats before combat
     player.displayStats();
     enemy.displayStats();
 
-    std::cout << "\nPress Enter to begin combat...";
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    cout << "\nPress Enter to begin combat...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     // Combat loop
     while (player.checkIsAlive() && enemy.checkIsAlive()) {
@@ -98,55 +99,55 @@ bool Level::combat(Player& player, Enemy& enemy) {
 
         // Check if enemy is defeated
         if (!enemy.checkIsAlive()) {
-            std::cout << "\n" << enemy.getName() << " has been defeated!" << std::endl;
+            cout << "\n" << enemy.getName() << " has been defeated!" << endl;
             break;
         }
 
         // Short pause between turns
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        this_thread::sleep_for(chrono::milliseconds(500));
 
         // Enemy's turn
         enemyTurn(player, enemy);
 
         // Check if player is defeated
         if (!player.checkIsAlive()) {
-            std::cout << "\nYou have been defeated by " << enemy.getName() << "!" << std::endl;
+            cout << "\nYou have been defeated by " << enemy.getName() << "!" << endl;
             return false;
         }
 
         // Display current health
-        std::cout << "\nHealth: " << player.getName() << ": " << player.getCurrentHealth()
+        cout << "\nHealth: " << player.getName() << ": " << player.getCurrentHealth()
             << "/" << player.getMaxHealth() << " | "
             << enemy.getName() << ": " << enemy.getCurrentHealth()
-            << "/" << enemy.getMaxHealth() << std::endl;
+            << "/" << enemy.getMaxHealth() << endl;
 
         // Short pause between rounds
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        this_thread::sleep_for(chrono::milliseconds(500));
     }
 
-    std::cout << "\n?? COMBAT END ??" << std::endl;
+    cout << "\n?? COMBAT END ??" << endl;
 
     return player.checkIsAlive();
 }
 
 // Method to handle player's turn in combat
 void Level::playerTurn(Player& player, Enemy& enemy) {
-    std::cout << "\n==== " << player.getName() << "'s Turn ====" << std::endl;
+    cout << "\n==== " << player.getName() << "'s Turn ====" << endl;
 
     // Show options
-    std::cout << "1. Attack" << std::endl;
-    std::cout << "2. Heal" << std::endl;
-    std::cout << "3. Display Stats" << std::endl;
+    cout << "1. Attack" << endl;
+    cout << "2. Heal" << endl;
+    cout << "3. Display Stats" << endl;
 
     // Get player choice
     int choice;
-    std::cout << "\nEnter your choice (1-3): ";
-    while (!(std::cin >> choice) || choice < 1 || choice > 3) {
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Invalid input. Please enter a number between 1 and 3: ";
+    cout << "\nEnter your choice (1-3): ";
+    while (!(cin >> choice) || choice < 1 || choice > 3) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Invalid input. Please enter a number between 1 and 3: ";
     }
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     // Handle player choice
     switch (choice) {
@@ -170,7 +171,7 @@ void Level::playerTurn(Player& player, Enemy& enemy) {
 
 // Method to handle enemy's turn in combat
 void Level::enemyTurn(Player& player, Enemy& enemy) {
-    std::cout << "\n==== " << enemy.getName() << "'s Turn ====" << std::endl;
+    cout << "\n==== " << enemy.getName() << "'s Turn ====" << endl;
 
     // Enemy gets a chance to heal if health is low
     if (enemy.getCurrentHealth() < enemy.getMaxHealth() * 0.3 && Character::getRandomNumber(1, 100) <= 30) {
@@ -187,11 +188,11 @@ void Level::enemyTurn(Player& player, Enemy& enemy) {
 void Level::awardRewards(Player& player) {
     // Award item if available
     if (reward) {
-        player.addItem(std::move(reward));
+        player.addItem(move(reward));
     }
 
     // Award ability if available
     if (newAbility) {
-        player.addAbility(std::move(newAbility));
+        player.addAbility(move(newAbility));
     }
 }

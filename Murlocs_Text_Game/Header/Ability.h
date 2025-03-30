@@ -1,8 +1,11 @@
-#pragma once
+// ability.h
+#ifndef ABILITY_H
+#define ABILITY_H
 
+#include "Header/Character.h"
 #include <string>
 #include <memory>
-#include "Character.h"
+
 using namespace std;
 
 class Ability {
@@ -89,3 +92,5 @@ public:
 	//setter for dodge status
 	void setDodgeNextAttack(bool status);
 };
+
+#endif 

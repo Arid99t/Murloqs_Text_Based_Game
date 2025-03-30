@@ -1,8 +1,9 @@
-#pragma once
+#ifndef PLAYER_H
+#define PLAYER_H
 
-#include "character.h"
-#include "ability.h"
-#include "item.h"
+#include "Header/Character.h"
+#include "Header/Ability.h"
+#include "Header/Item.h"
 #include <vector>
 #include <memory>
 using namespace std;
@@ -35,8 +36,8 @@ public:
 	void levelUp();
 	void addAbility(unique_ptr<Ability> ability);
 	void addItem(unique_ptr<Item> item);
-	void useIteam(int index);
-	void useIteam(const string& itemName);
+	void useItem(int index);
+	void useItem(const string& itemName);
 	void listAbilities() const;
 	void listInventory() const;
 
@@ -52,3 +53,5 @@ public:
 	//method to check and trigger abilities based on probability
 	bool tryActivateAbility(Character& target);
 };
+
+#endif 

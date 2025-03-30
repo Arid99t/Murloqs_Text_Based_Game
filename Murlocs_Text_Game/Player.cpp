@@ -1,17 +1,17 @@
 ﻿// player.cpp
-#include "player.h"
+#include "Header/Player.h"
 #include <iostream>
 #include <algorithm>
-
+using namespace std;
 // Constructor implementation
-Player::Player(const std::string& name)
+Player::Player(const string& name)
     : Character(name, 100, 15, 10, 5), level(1), blockNextAttack(false), dodgeNextAttack(false) {
 }
 
 // Override methods from Character
 void Player::attack(Character& target) {
     if (!isAlive) {
-        std::cout << name << " cannot attack because they are defeated!" << std::endl;
+        cout << name << " cannot attack because they are defeated!" << endl;
         return;
     }
 
@@ -22,7 +22,7 @@ void Player::attack(Character& target) {
 
     // Regular attack if no ability was activated
     int damage = meleeDamage;
-    std::cout << name << " attacks " << target.getName() << " for " << damage << " damage!" << std::endl;
+    cout << name << " attacks " << target.getName() << " for " << damage << " damage!" << endl;
     target.takeDamage(damage);
 }
 
@@ -31,20 +31,20 @@ void Player::takeDamage(int damage) {
 
     // Check if block or dodge is active
     if (blockNextAttack) {
-        std::cout << name << " blocks the attack completely!" << std::endl;
+        cout << name << " blocks the attack completely!" << endl;
         blockNextAttack = false; // Reset block status
         return;
     }
 
     if (dodgeNextAttack) {
-        std::cout << name << " dodges the attack completely!" << std::endl;
+        cout << name << " dodges the attack completely!" << endl;
         dodgeNextAttack = false; // Reset dodge status
         return;
     }
 
     // Calculate actual damage after defense
     int actualDamage = calculateDamage(damage);
-    std::cout << name << " takes " << actualDamage << " damage!" << std::endl;
+    cout << name << " takes " << actualDamage << " damage!" << endl;
 
     // Update health
     setCurrentHealth(currentHealth - actualDamage);
@@ -52,13 +52,13 @@ void Player::takeDamage(int damage) {
     // Check if player is defeated
     if (currentHealth <= 0) {
         isAlive = false;
-        std::cout << name << " has been defeated!" << std::endl;
+        cout << name << " has been defeated!" << endl;
     }
 }
 
 void Player::heal(int amount) {
     if (!isAlive) {
-        std::cout << name << " cannot heal because they are defeated!" << std::endl;
+        cout << name << " cannot heal because they are defeated!" << endl;
         return;
     }
 
@@ -66,47 +66,47 @@ void Player::heal(int amount) {
     setCurrentHealth(currentHealth + amount);
     int actualHeal = currentHealth - oldHealth;
 
-    std::cout << name << " heals for " << actualHeal << " health points!" << std::endl;
-    std::cout << "Health: " << currentHealth << "/" << maxHealth << std::endl;
+    cout << name << " heals for " << actualHeal << " health points!" << endl;
+    cout << "Health: " << currentHealth << "/" << maxHealth << endl;
 }
 
 void Player::displayStats() const {
-    std::cout << "\n===== " << name << "'s Stats (Level " << level << ") =====" << std::endl;
-    std::cout << "Health: " << currentHealth << "/" << maxHealth << std::endl;
-    std::cout << "Melee Damage: " << meleeDamage << std::endl;
-    std::cout << "Ranged Damage: " << rangedDamage << std::endl;
-    std::cout << "Defence: " << defence << std::endl;
+    cout << "\n===== " << name << "'s Stats (Level " << level << ") =====" << endl;
+    cout << "Health: " << currentHealth << "/" << maxHealth << endl;
+    cout << "Melee Damage: " << meleeDamage << endl;
+    cout << "Ranged Damage: " << rangedDamage << endl;
+    cout << "Defence: " << defence << endl;
 
     // Display abilities if any
     if (!abilities.empty()) {
-        std::cout << "\nSpecial Abilities:" << std::endl;
+        cout << "\nSpecial Abilities:" << endl;
         for (size_t i = 0; i < abilities.size(); ++i) {
-            std::cout << "  " << (i + 1) << ". " << abilities[i]->getName()
+            cout << "  " << (i + 1) << ". " << abilities[i]->getName()
                 << " - " << abilities[i]->getDescription()
-                << " (" << abilities[i]->getActivationChance() << "% chance)" << std::endl;
+                << " (" << abilities[i]->getActivationChance() << "% chance)" << endl;
         }
     }
 
     // Display inventory if any
     if (!inventory.empty()) {
-        std::cout << "\nInventory:" << std::endl;
+        cout << "\nInventory:" << endl;
         for (size_t i = 0; i < inventory.size(); ++i) {
-            std::cout << "  " << (i + 1) << ". " << inventory[i]->getName() << std::endl;
+            cout << "  " << (i + 1) << ". " << inventory[i]->getName() << endl;
         }
     }
 
-    std::cout << "===============================" << std::endl;
+    cout << "===============================" << endl;
 }
 
 // Method overloading for attack with specific ability
 void Player::attack(Character& target, int abilityIndex) {
     if (!isAlive) {
-        std::cout << name << " cannot attack because they are defeated!" << std::endl;
+        cout << name << " cannot attack because they are defeated!" << endl;
         return;
     }
 
     if (abilityIndex < 0 || abilityIndex >= static_cast<int>(abilities.size())) {
-        std::cout << "Invalid ability index!" << std::endl;
+        cout << "Invalid ability index!" << endl;
         return;
     }
 
@@ -115,15 +115,15 @@ void Player::attack(Character& target, int abilityIndex) {
 }
 
 // Method overloading for attack with ability by name
-void Player::attack(Character& target, const std::string& abilityName) {
+void Player::attack(Character& target, const string& abilityName) {
     if (!isAlive) {
-        std::cout << name << " cannot attack because they are defeated!" << std::endl;
+        cout << name << " cannot attack because they are defeated!" << endl;
         return;
     }
 
     // Find ability by name
-    auto it = std::find_if(abilities.begin(), abilities.end(),
-        [&abilityName](const std::unique_ptr<Ability>& ability) {
+    auto it = find_if(abilities.begin(), abilities.end(),
+        [&abilityName](const unique_ptr<Ability>& ability) {
             return ability->getName() == abilityName;
         });
 
@@ -132,7 +132,7 @@ void Player::attack(Character& target, const std::string& abilityName) {
         (*it)->use(*this, target);
     }
     else {
-        std::cout << "Ability '" << abilityName << "' not found!" << std::endl;
+        cout << "Ability '" << abilityName << "' not found!" << endl;
         // Fall back to regular attack
         attack(target);
     }
@@ -154,45 +154,45 @@ void Player::levelUp() {
     setRangedDamage(rangedDamage + rangedIncrease);
     setDefence(defence + defenceIncrease);
 
-    std::cout << "\n🌟 LEVEL UP! 🌟" << std::endl;
-    std::cout << name << " is now level " << level << "!" << std::endl;
-    std::cout << "Max Health increased by " << healthIncrease << " to " << maxHealth << "!" << std::endl;
-    std::cout << "Melee Damage increased by " << meleeIncrease << " to " << meleeDamage << "!" << std::endl;
-    std::cout << "Ranged Damage increased by " << rangedIncrease << " to " << rangedDamage << "!" << std::endl;
-    std::cout << "Defence increased by " << defenceIncrease << " to " << defence << "!" << std::endl;
+    cout << "\n🌟 LEVEL UP! 🌟" << endl;
+    cout << name << " is now level " << level << "!" << endl;
+    cout << "Max Health increased by " << healthIncrease << " to " << maxHealth << "!" << endl;
+    cout << "Melee Damage increased by " << meleeIncrease << " to " << meleeDamage << "!" << endl;
+    cout << "Ranged Damage increased by " << rangedIncrease << " to " << rangedDamage << "!" << endl;
+    cout << "Defence increased by " << defenceIncrease << " to " << defence << "!" << endl;
 }
 
-void Player::addAbility(std::unique_ptr<Ability> ability) {
-    std::cout << "\n✨ NEW ABILITY UNLOCKED! ✨" << std::endl;
-    std::cout << "You have learned: " << ability->getName() << std::endl;
-    std::cout << ability->getDescription() << " (" << ability->getActivationChance() << "% chance)" << std::endl;
+void Player::addAbility(unique_ptr<Ability> ability) {
+    cout << "\n✨ NEW ABILITY UNLOCKED! ✨" << endl;
+    cout << "You have learned: " << ability->getName() << endl;
+    cout << ability->getDescription() << " (" << ability->getActivationChance() << "% chance)" << endl;
 
-    abilities.push_back(std::move(ability));
+    abilities.push_back(move(ability));
 }
 
-void Player::addItem(std::unique_ptr<Item> item) {
-    std::cout << "\n🎁 NEW ITEM ACQUIRED! 🎁" << std::endl;
-    std::cout << "You have obtained: " << item->getName() << std::endl;
+void Player::addItem(unique_ptr<Item> item) {
+    cout << "\n🎁 NEW ITEM ACQUIRED! 🎁" << endl;
+    cout << "You have obtained: " << item->getName() << endl;
 
     // Use the item immediately to apply its effects
     item->use();
 
     // Store in inventory
-    inventory.push_back(std::move(item));
+    inventory.push_back(move(item));
 }
 
 void Player::useItem(int index) {
     if (index < 0 || index >= static_cast<int>(inventory.size())) {
-        std::cout << "Invalid item index!" << std::endl;
+        cout << "Invalid item index!" << endl;
         return;
     }
 
     inventory[index]->use();
 }
 
-void Player::useItem(const std::string& itemName) {
-    auto it = std::find_if(inventory.begin(), inventory.end(),
-        [&itemName](const std::unique_ptr<Item>& item) {
+void Player::useItem(const string& itemName) {
+    auto it = find_if(inventory.begin(), inventory.end(),
+        [&itemName](const unique_ptr<Item>& item) {
             return item->getName() == itemName;
         });
 
@@ -200,33 +200,33 @@ void Player::useItem(const std::string& itemName) {
         (*it)->use();
     }
     else {
-        std::cout << "Item '" << itemName << "' not found in inventory!" << std::endl;
+        cout << "Item '" << itemName << "' not found in inventory!" << endl;
     }
 }
 
 void Player::listAbilities() const {
     if (abilities.empty()) {
-        std::cout << "You have no special abilities yet." << std::endl;
+        cout << "You have no special abilities yet." << endl;
         return;
     }
 
-    std::cout << "\nSpecial Abilities:" << std::endl;
+    cout << "\nSpecial Abilities:" << endl;
     for (size_t i = 0; i < abilities.size(); ++i) {
-        std::cout << (i + 1) << ". " << abilities[i]->getName()
+        cout << (i + 1) << ". " << abilities[i]->getName()
             << " - " << abilities[i]->getDescription()
-            << " (" << abilities[i]->getActivationChance() << "% chance)" << std::endl;
+            << " (" << abilities[i]->getActivationChance() << "% chance)" << endl;
     }
 }
 
 void Player::listInventory() const {
     if (inventory.empty()) {
-        std::cout << "Your inventory is empty." << std::endl;
+        cout << "Your inventory is empty." << endl;
         return;
     }
 
-    std::cout << "\nInventory:" << std::endl;
+    cout << "\nInventory:" << endl;
     for (size_t i = 0; i < inventory.size(); ++i) {
-        std::cout << (i + 1) << ". " << inventory[i]->getName() << std::endl;
+        cout << (i + 1) << ". " << inventory[i]->getName() << endl;
     }
 }
 

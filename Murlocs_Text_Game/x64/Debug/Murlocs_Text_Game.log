@@ -1,0 +1,24 @@
+﻿  Ability.cpp
+  Character.cpp
+  Enemy.cpp
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Enemy.cpp(81,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Enemy.cpp(82,66): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Enemy.cpp(102,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Enemy.cpp(123,18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Enemy.cpp(124,11): warning C4566: character represented by universal-character-name '\U0001F49A' cannot be represented in the current code page (1252)
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Enemy.cpp(148,10): warning C4566: character represented by universal-character-name '\u26A1' cannot be represented in the current code page (1252)
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Enemy.cpp(152,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Enemy.cpp(172,18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Enemy.cpp(192,28): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Game.cpp
+  Level.cpp
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Level.cpp(28,24): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Level.cpp(159,24): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Level.cpp(178,24): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+  Player.cpp
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Player.cpp(157,13): warning C4566: character represented by universal-character-name '\U0001F31F' cannot be represented in the current code page (1252)
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Player.cpp(166,13): warning C4566: character represented by universal-character-name '\u2728' cannot be represented in the current code page (1252)
+D:\Users\MY PC\source\repos\Murlocs_Text_Game\Murlocs_Text_Game\Player.cpp(174,13): warning C4566: character represented by universal-character-name '\U0001F381' cannot be represented in the current code page (1252)
+  Generating Code...
+  Murlocs_Text_Game.vcxproj -> D:\Users\MY PC\source\repos\Murlocs_Text_Game\x64\Debug\Murlocs_Text_Game.exe
